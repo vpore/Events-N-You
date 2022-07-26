@@ -1,37 +1,43 @@
-import React, { useState } from 'react';
-import { signin } from '../../api';
+import React from 'react'
+import { useState } from "react";
+import "./login.css";
 
-const initialState = {username: '', password: ''};
-
-const Login= () =>{
-    const [form, setForm] = useState(initialState);
-    const [showPassword, setShowPassword] = useState(false);
-    const handleShowPassword = () => setShowPassword(!showPassword);
-    const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
-    const handleSubmit = (e) => {
-        e.preventDefault();
-    }
-
+class Login extends React.Component{
+  render(){
     return(
-        <form onSubmit={handleSubmit}>
-            
-                <h2>Welcome to Events-N-You </h2>
-                <div className= "form-group">
-                    <label htmlFor= "username">Username </label>
-                    <input type="username" name="username" id="username" handleChange={handleChange}/>
-                       
-                </div>
-                <div className= "form-group">
-                    <label htmlFor="password">Password </label>
-                    <input type={showPassword ? 'text' : 'password' } name="password" id="password" handleChange={handleChange} handleShowPassword={handleShowPassword}/>
-                   </div>
-                <button type ="submit">Login</button>
-
-            
-        </form>
+      <div id="loginform">
+        <FormHeader title="Welcome to Event-N-You" />
+        <Form />
+      </div>
     )
-       
-    
+  }
 }
+
+const FormHeader = props => (
+    <h2 id="headerTitle">{props.title}</h2>
+);
+
+
+const Form = props => (
+   <div>
+     <FormInput description="Username" placeholder="Enter your username" type="text" />
+     <FormInput description="Password" placeholder="Enter your password" type="password"/>
+     <FormButton title="Log in"/>
+   </div>
+);
+
+const FormButton = props => (
+  <div id="button" class="row">
+    <button>{props.title}</button>
+  </div>
+);
+
+const FormInput = props => (
+  <div class="row">
+    <label>{props.description}</label>
+    <input type={props.type} placeholder={props.placeholder}/>
+  </div>  
+);
+
 
 export default Login
