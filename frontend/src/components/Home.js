@@ -10,7 +10,7 @@ import EventRequest from "./EventRequest/EventRequest";
 const Home = () => {
     return(
         <>
-            <Container style={{marginLeft: "0px", marginRight: "0px"}}>
+            <Container>
                 <Row>
                     <Col md={8} sm={12}>
                         <div className="home">
@@ -18,7 +18,7 @@ const Home = () => {
                         </div>
                     </Col>
 
-                    <Col md={4} sm={12} style={{marginLeft: "0px"}}>
+                    <Col md={4} sm={12}>
                         <div className="home">
                             <EventRequest />
                         </div>
