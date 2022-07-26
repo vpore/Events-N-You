@@ -2,42 +2,29 @@ import React from 'react'
 import { useState } from "react";
 import "./login.css";
 
-class Login extends React.Component{
-  render(){
+const Login = () => {
     return(
       <div id="loginform">
-        <FormHeader title="Welcome to Event-N-You" />
-        <Form />
+        <h2 id="headerTitle">Welcome to Events-N-You</h2>
+        <div>
+
+          <div class="row">
+            <label>Username</label>
+            <input type="text" placeholder="Enter your Username"/>
+          </div>
+
+          <div class="row">
+            <label>Password</label>
+            <input type="password" placeholder="Enter your Password"/>
+          </div>
+
+          <div id="button" class="row">
+            <button>Log In</button>
+          </div>
+
+        </div>
       </div>
-    )
-  }
+    );
 }
-
-const FormHeader = props => (
-    <h2 id="headerTitle">{props.title}</h2>
-);
-
-
-const Form = props => (
-   <div>
-     <FormInput description="Username" placeholder="Enter your username" type="text" />
-     <FormInput description="Password" placeholder="Enter your password" type="password"/>
-     <FormButton title="Log in"/>
-   </div>
-);
-
-const FormButton = props => (
-  <div id="button" class="row">
-    <button>{props.title}</button>
-  </div>
-);
-
-const FormInput = props => (
-  <div class="row">
-    <label>{props.description}</label>
-    <input type={props.type} placeholder={props.placeholder}/>
-  </div>  
-);
-
 
 export default Login
