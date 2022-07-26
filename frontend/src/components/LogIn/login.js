@@ -28,16 +28,16 @@ const Login = () => {
 
           <div class="row">
             <label>Username</label>
-            <input type="text" placeholder="Enter your Username" handleChange={handleChange}/>
+            <input type="text" name='username' placeholder="Enter your Username" onChange={handleChange}/>
           </div>
 
           <div class="row">
             <label>Password</label>
-            <input placeholder="Enter your Password" handleChange={handleChange} type={showPassword ? 'text' : 'password'} handleShowPassword={handleShowPassword}/>
+            <input placeholder="Enter your Password" name='password' onChange={handleChange} type={showPassword ? 'text' : 'password'} handleShowPassword={handleShowPassword}/>
           </div>
 
           <div id="button" class="row">
-            <button>Log In</button>
+            <button type="submit">Log In</button>
           </div>
 
         </div>
