@@ -1,17 +1,24 @@
-import React from 'react'
-import { useState } from "react";
+import React, {useState} from 'react'
 import "./login.css";
+import { signin } from '../../api';
+
+const initialState = {username: '', password: ''};
 
 class Login extends React.Component{
   render(){
+    // const handleSubmit = (e) => {
+    //     e.preventDefault();
+    // }
     return(
       <div id="loginform">
         <FormHeader title="Welcome to Event-N-You" />
-        <Form />
+        <Form/>
+        {console.log('hi')}
       </div>
     )
   }
 }
+
 
 const FormHeader = props => (
     <h2 id="headerTitle">{props.title}</h2>
@@ -19,7 +26,11 @@ const FormHeader = props => (
 
 
 const Form = props => (
+    // const [form, setForm] = useState(initialState);
+    // const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
+
    <div>
+    {console.log('bye')}
      <FormInput description="Username" placeholder="Enter your username" type="text" />
      <FormInput description="Password" placeholder="Enter your password" type="password"/>
      <FormButton title="Log in"/>
