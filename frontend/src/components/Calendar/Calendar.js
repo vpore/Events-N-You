@@ -6,10 +6,16 @@ function Calendar() {
 
     const [myEvents, setEvents] = React.useState([]);
 
+    const data = [{
+        start: new Date(2022, 6, 19),
+        end: new Date(2022, 6, 26),
+        title: 'Conference',
+        allDay: true,
+        color: 'red'
+      }]
+
     React.useEffect(() => {
-        getJson('https://trial.mobiscroll.com/events/?vers=5', (events) => {
-            setEvents(events);
-        }, 'jsonp');
+        setEvents(data);
     }, []);
     
     const onEventClick = React.useCallback((event) => {
@@ -23,6 +29,19 @@ function Calendar() {
             calendar: { labels: true }
         };
     }, []);
+
+    const responsive = {
+        xsmall: {
+            view: {
+                calendar: {
+                    type: 'week'
+                },
+                agenda: {
+                    type: 'day'
+                }
+            }
+        }
+    }
 
     return (
         <Eventcalendar
