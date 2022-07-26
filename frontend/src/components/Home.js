@@ -8,6 +8,12 @@ import Calendar from "./Calendar/Calendar";
 import EventRequest from "./EventRequest/EventRequest";
 
 const Home = () => {
+    // const userr = JSON.parse(localStorage.getItem('username'));
+    
+    const userr = JSON.parse(localStorage.getItem('role'));
+    const user = JSON.parse(localStorage.getItem('profile'));
+    console.log(userr);
+    console.log(user);
     return(
         <>
             <Container style={{marginLeft: "0px", marginRight: "0px"}}>
@@ -18,11 +24,11 @@ const Home = () => {
                         </div>
                     </Col>
 
-                    <Col md={4} sm={12} style={{marginLeft: "0px"}}>
+                    {userr==='principal' && <Col md={4} sm={12} style={{marginLeft: "0px"}}>
                         <div className="home">
                             <EventRequest />
                         </div>
-                    </Col>
+                    </Col>}
                 </Row>
             </Container>
             {/* <Calendar />
