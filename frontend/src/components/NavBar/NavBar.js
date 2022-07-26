@@ -31,20 +31,24 @@ const Navbar = () => {
             <div className="landing-navbar">
                 <div className="landing-navbar-logo">
                     {/* <img src={logo} alt="product-logo" /> */}
-					<p>Product-Name</p> 
+					<p>Events-N-You</p> 
                 </div>
 				
                 <div className="landing-navbar-links">
                     <NavLinks />
 					{
 						user ? (
-							<button>
-								Log Out
+							<button className="button-two">
+								<span>
+									Log Out
+								</span>
 							</button>
 						) : (
 							<Link to='/login'>
-								<button>
-									Log In
+								<button className="button-two">
+									<span>
+										Log In
+									</span>
 								</button>
 							</Link>
 						)
