@@ -1,20 +1,29 @@
-import React from 'react'
-import { useState } from "react";
+import React, { useState } from 'react';
+import { signin } from '../../api';
+
+const initialState = {username: '', password: ''};
+
 const Login= () =>{
-    const [ email, setEmail] = useState("");
-    const [ password, setPassword] = useState("");
+    const [form, setForm] = useState(initialState);
+    const [showPassword, setShowPassword] = useState(false);
+    const handleShowPassword = () => setShowPassword(!showPassword);
+    const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
+    const handleSubmit = (e) => {
+        e.preventDefault();
+    }
+
     return(
-        <form action= "">
+        <form onSubmit={handleSubmit}>
             
                 <h2>Welcome to Events-N-You </h2>
                 <div className= "form-group">
-                    <label htmlFor= "email">Email </label>
-                    <input type="email" name="email" id="email"/>
+                    <label htmlFor= "username">Username </label>
+                    <input type="username" name="username" id="username" handleChange={handleChange}/>
                        
                 </div>
                 <div className= "form-group">
                     <label htmlFor="password">Password </label>
-                    <input type="password" name="password" id="password"/>
+                    <input type={showPassword ? 'text' : 'password' } name="password" id="password" handleChange={handleChange} handleShowPassword={handleShowPassword}/>
                    </div>
                 <button type ="submit">Login</button>
 
