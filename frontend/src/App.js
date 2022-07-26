@@ -24,7 +24,7 @@ const App = () => {
     // }, [location]);
     return(
         <>            
-            <BrowserRouter>
+            <BrowserRouter forceRefresh={true}>
                 <NavBar />
                 <Routes>
                     <Route path='/' exact element={<Home />}/>
