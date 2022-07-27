@@ -11,8 +11,8 @@ import Form from "./components/Form/form";
 import './App.css'  
 
 const App = () => {
-    const user = JSON.parse(localStorage.getItem('profile'));
-    // const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
+    // const user = JSON.parse(localStorage.getItem('profile'));
+    const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
     // const location = useLocation();
 
     // useEffect (() => {
@@ -30,7 +30,7 @@ const App = () => {
                 <Routes>
                     <Route path='/' exact element={<Home />}/>
                     <Route path='/login' exact element= {(!user) ? <Login />: <Navigate to="/principal"/>} />
-                    
+                    <Route path='/committee/form' exact element= {(!user) ? <Login />: <Form/>} />
                     <Route path='/principal' exact element= {(!user) ? <Login />: <Home />}/> 
                     <Route path='/committee' exact element= {(!user) ? <Login />: <Home />}/>
                 </Routes>

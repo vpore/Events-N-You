@@ -20,7 +20,7 @@ const FormHeader = props => (
 
 const Form = props => (
    <div>
-     <FormInput description="Committee" placeholder="Enter your username" type="text" />
+     <FormInput description="Committee" placeholder="Enter committee name" type="text" />
      <FormInput description="Event Name" placeholder="Enter event name" type="text"/>
      <FormInput description="Start Date"  type="date" />
      <FormInput description="Time"  type="time" />

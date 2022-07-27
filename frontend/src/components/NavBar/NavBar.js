@@ -1,30 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import './NavBar.css';
-import { Link } from "react-router-dom";
-
-const NavLinks = () => (
-	<React.Fragment>
-		<p>
-			<a href="/">Blog</a>
-		</p>
-		<p>
-			<a href="/">Product</a>
-		</p>
-		<p>
-			<a href="/">Community</a>
-		</p>
-		<p>
-			<a href="/">Pricing</a>
-		</p>
-		<p>
-			<a href="/">Contact Us</a>
-		</p>
-	</React.Fragment>
-);
+import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
 
-	const user = JSON.parse(localStorage.getItem('profile'));
+	//const location = useLocation();
+	const navigate = useNavigate();
+	const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
+
+	const [userr, setUserr] = useState(JSON.parse(localStorage.getItem('role')));
+
+	const logout = () => {
+		localStorage.clear();
+		setUser(null);
+        navigate('/');
+    }
 
     return(
         <>
@@ -35,10 +25,21 @@ const Navbar = () => {
                 </div>
 				
                 <div className="landing-navbar-links">
-                    <NavLinks />
+					
+					{
+						userr && userr !== 'principal' && (
+							<Link to='/committee/form'>
+								<button className="button-two">
+									<span>
+										Event Request
+									</span>
+								</button>
+							</Link>
+						)
+					}
 					{
 						user ? (
-							<button className="button-two">
+							<button className="button-two" onClick={logout}>
 								<span>
 									Log Out
 								</span>

@@ -39,13 +39,13 @@ html{
 }
 
 .field input{
-  width: 80%;
+  width: 30%;
   box-sizing: border-box;
 	border: none;
   font-size: 1.3rem;
   padding-left: 1.5rem;
   padding-bottom: 1rem;
-  box-shadow: inset 0px -3px 0px 0px rgba(187,187,187,0.2);
+  box-shadow: inset 0px -3px 0px 0px rgba(8, 3, 3, 0.2);
   transition: box-shadow 0.2s ease-in;
 }
 
@@ -68,12 +68,12 @@ html{
   align-self: start;
   padding-left: 4.5rem;
   padding-bottom: 0.5rem;
-  color: rgba(187,187,187,0.9);
+  color: rgba(9, 7, 7, 0.9);
 }
 
 .field button{
   border-radius: 25px;
-  width: 80%;
+  width: 30%;
   height: 40px;
   font-size: 1.3rem;
   color: white;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import './Home.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -10,10 +10,13 @@ import EventRequest from "./EventRequest/EventRequest";
 const Home = () => {
     // const userr = JSON.parse(localStorage.getItem('username'));
     
-    const userr = JSON.parse(localStorage.getItem('role'));
+    const [userr, setUserr] = useState(JSON.parse(localStorage.getItem('role')));
     const user = JSON.parse(localStorage.getItem('profile'));
-    console.log(userr);
-    console.log(user);
+
+    useEffect(() => {
+        setUserr(JSON.parse(localStorage.getItem('role')));
+    }, []);
+
     return(
         <>
             <Container>
