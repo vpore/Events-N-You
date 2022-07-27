@@ -4,6 +4,8 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
+import pic from '../assets/home.svg';
+
 import Calendar from "./Calendar/Calendar";
 import EventRequest from "./EventRequest/EventRequest";
 
@@ -32,6 +34,11 @@ const Home = () => {
                             <EventRequest />
                         </div>
                     </Col>}
+
+                    {!user && <Col md={4}>
+                        <img src={pic} height='200px' style={{marginTop: "10px"}}></img>
+                        </Col>
+                    }
                 </Row>
             </Container>
             {/* <Calendar />

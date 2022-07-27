@@ -8,8 +8,22 @@ function Calendar() {
 
     const data = [{
         start: new Date(2022, 6, 19),
-        end: new Date(2022, 6, 26),
-        title: 'Conference',
+        end: new Date(2022, 6, 20),
+        title: 'CSI TechNext',
+        allDay: true,
+        color: 'red'
+      },
+      {
+        start: new Date(2022, 6, 22),
+        end: new Date(2022, 6, 22),
+        title: 'CodeStorm Technical Hunt',
+        allDay: true,
+        color: 'blue'
+      },
+      {
+        start: new Date(2022, 6, 19),
+        end: new Date(2022, 6, 20),
+        title: 'CSI TechNext',
         allDay: true,
         color: 'red'
       }]

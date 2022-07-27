@@ -17,14 +17,15 @@ function EventRequest() {
         placement="bottom"
         overlay={
             <Popover id={`popover-positioned-bottom`}>
-            <Popover.Header as="h3">Event Title</Popover.Header>
+            <Popover.Header as="h3">CSI Committee</Popover.Header>
             <Popover.Body>
-                <strong>Event Title</strong> Bicycle rights irony actually neutra typewriter lyft. Man bun taxidermy put a bird on it, umami yr ramps pop-up ugh bushwick chia lo-fi. Occupy bitters pour-over snackwave you probably haven't heard of them small batch. Cornhole mustache man bun letterpress echo park VHS.
+                <strong>CSI TechNext</strong> Bicycle rights irony actually neutra typewriter lyft. Man bun taxidermy put a bird on it, umami yr ramps pop-up ugh bushwick chia lo-fi. Occupy bitters pour-over snackwave you probably haven't heard of them small batch. Cornhole mustache man bun letterpress echo park VHS.
+                <br></br><Button variant="danger">Reject</Button> <Button variant="success">Accept</Button>{' '}
             </Popover.Body>
             </Popover>
         }
         >
-        <Button variant="secondary" style={{width: "500px"}}>Event Name</Button>
+        <Button variant="secondary" style={{width: "500px"}}>CSI TechNext</Button>
         </OverlayTrigger>
 
         <OverlayTrigger
@@ -33,14 +34,15 @@ function EventRequest() {
         placement="bottom"
         overlay={
             <Popover id={`popover-positioned-bottom`}>
-            <Popover.Header as="h3">Event Title</Popover.Header>
+            <Popover.Header as="h3">CodeStorm Committee</Popover.Header>
             <Popover.Body>
-                <strong>Event Title</strong> Bicycle rights irony actually neutra typewriter lyft. Man bun taxidermy put a bird on it, umami yr ramps pop-up ugh bushwick chia lo-fi. Occupy bitters pour-over snackwave you probably haven't heard of them small batch. Cornhole mustache man bun letterpress echo park VHS.
+                <strong>CodeStorm Hackathon</strong> Bicycle rights irony actually neutra typewriter lyft. Man bun taxidermy put a bird on it, umami yr ramps pop-up ugh bushwick chia lo-fi. Occupy bitters pour-over snackwave you probably haven't heard of them small batch. Cornhole mustache man bun letterpress echo park VHS.
+                <br></br><Button variant="danger">Reject</Button> <Button variant="success">Accept</Button>{' '}
             </Popover.Body>
             </Popover>
         }
         >
-        <Button variant="secondary" style={{width: "500px", marginTop: "10px"}}>Event Name</Button>
+        <Button variant="secondary" style={{width: "500px", marginTop: "10px"}}>CodeStorm Hackathon</Button>
         </OverlayTrigger>
 
         <OverlayTrigger
@@ -49,14 +51,15 @@ function EventRequest() {
         placement="bottom"
         overlay={
             <Popover id={`popover-positioned-bottom`}>
-            <Popover.Header as="h3">Event Title</Popover.Header>
+            <Popover.Header as="h3">IETE Committee</Popover.Header>
             <Popover.Body>
-                <strong>Event Title</strong> Bicycle rights irony actually neutra typewriter lyft. Man bun taxidermy put a bird on it, umami yr ramps pop-up ugh bushwick chia lo-fi. Occupy bitters pour-over snackwave you probably haven't heard of them small batch. Cornhole mustache man bun letterpress echo park VHS.
+                <strong>IETE ELAN</strong> Bicycle rights irony actually neutra typewriter lyft. Man bun taxidermy put a bird on it, umami yr ramps pop-up ugh bushwick chia lo-fi. Occupy bitters pour-over snackwave you probably haven't heard of them small batch. Cornhole mustache man bun letterpress echo park VHS.
+                <br></br><Button variant="danger">Reject</Button> <Button variant="success">Accept</Button>{' '}
             </Popover.Body>
             </Popover>
         }
         >
-        <Button variant="secondary" style={{width: "500px", marginTop: "10px"}}>Event Name</Button>
+        <Button variant="secondary" style={{width: "500px", marginTop: "10px"}}>IETE ELAN</Button>
         </OverlayTrigger>
     </>
   );
