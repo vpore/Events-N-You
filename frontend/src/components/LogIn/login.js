@@ -1,7 +1,7 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import "./login.css";
 import { signin } from '../../api';
-import { Navigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const initialState = {username: '', password: ''};
 
@@ -9,13 +9,17 @@ const Login = () => {
 
     const [form, setForm] = useState(initialState);
     const [showPassword, setShowPassword] = useState(false);
+    const navigate = useNavigate();
     const handleShowPassword = () => setShowPassword(!showPassword);
     const handleSubmit = (e) => {
         e.preventDefault();
 
         signin(form);
-        
-        Navigate('/principal');
+        if(form.username === 'principal')
+        navigate('/principal');
+
+        else
+        navigate('/committee');
     }
 
     const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
