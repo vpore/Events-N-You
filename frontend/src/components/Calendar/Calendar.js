@@ -1,10 +1,23 @@
 import React from 'react';
 import '@mobiscroll/react/dist/css/mobiscroll.min.css';
 import { Eventcalendar, getJson, toast } from '@mobiscroll/react';
+import { getreq } from '../../api';
 
 function Calendar() {
 
+    getreq();
+    
+    // const eventsdata = getreq();
+    //console.log(typeof data);
+
     const [myEvents, setEvents] = React.useState([]);
+
+    // const data = eventsdata.map((eachdata) => ({
+    //     start: new Date(eachdata.sdate),
+    //     end: new Date(eachdata.edate),
+    //     title: eachdata.evename,
+    //     color: 'red'
+    // }) )
 
     const data = [{
         start: new Date(2022, 6, 19),

@@ -6,7 +6,6 @@ import { Navigate } from "react-router-dom";
 import Home from "./components/Home";
 import NavBar from './components/NavBar/NavBar';
 import Login from "./components/LogIn/login";
-import Form from "./components/Form/form";
 
 import './App.css'  
 
