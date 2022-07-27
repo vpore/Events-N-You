@@ -13,3 +13,22 @@ export const signin = (formData) => API.post('/principal/signin', formData)
     .catch(function (error) {
         console.log(error);
     })
+
+export const submitreq = (reqData) => API.post('/committee/request', reqData)
+    .then(function (response) {
+        console.log(response.data)
+        console.log('hi')
+    })
+    .catch(function (error) {
+        alert(error.response.data.message)
+    })
+
+export const getreq = () => API.get('/committee')
+.then(function (response) {
+        console.log(response.data)
+
+        return response.data;
+})
+.catch(function (error) {
+    console.log(error);
+})
